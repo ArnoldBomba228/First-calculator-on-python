@@ -1,3 +1,5 @@
+from python import validate_number, get_operation_symbol
+
 def add(a, b):
     return a + b
 
@@ -17,8 +19,8 @@ def main():
     
     
     try:
-        num1 = float(input('Введите первое число: '))
-        num2 = float(input('Введите второе число: '))
+        num1 = validate_number(input("Введите первое число: "))
+        num2 = validate_number(input("Введите второе число: "))
         operation = input("Выберите операцию (+, -, *, /): ")
         
         if operation == '+':
